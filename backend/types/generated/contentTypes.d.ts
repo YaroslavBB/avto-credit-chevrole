@@ -557,7 +557,7 @@ export interface ApiMainPageMainPage extends Struct.SingleTypeSchema {
       >;
     logoSubtitle: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'\u041E\u0444\u0438\u0446\u0438\u0430\u043B\u044C\u043D\u044B\u0439 \u0434\u0438\u043B\u0435\u0440'>;
-    mapEmbedUrl: Schema.Attribute.String;
+    mapEmbedUrl: Schema.Attribute.Text;
     phones: Schema.Attribute.Component<'shared.phone', true>;
     publishedAt: Schema.Attribute.DateTime;
     socialLinks: Schema.Attribute.Component<'shared.social-link', true>;

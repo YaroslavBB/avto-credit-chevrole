@@ -75,7 +75,7 @@
       "type": "string"
     },
     "mapEmbedUrl": {
-      "type": "string"
+      "type": "text"
     },
     "logoScript": {
       "type": "customField",
