@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #0066b3;
+  --color-primary-dark: #004c8a;
+}
+
+body {
+  @apply antialiased text-gray-900 bg-white;
+}
+
+html, body {
+  overflow-x: hidden;
+}

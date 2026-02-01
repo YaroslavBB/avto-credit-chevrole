@@ -1,0 +1,17 @@
+# PostgreSQL для локальной разработки (Strapi).
+# Запуск: docker compose up -d
+# Остановка: docker compose down
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: strapi
+      POSTGRES_PASSWORD: your-password
+      POSTGRES_DB: strapi
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_advantages",
+  "info": {
+    "displayName": "Advantage",
+    "description": "Преимущество: заголовок и текст"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "text"
+    }
+  }
+}

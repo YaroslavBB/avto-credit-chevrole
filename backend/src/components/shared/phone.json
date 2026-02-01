@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_phones",
+  "info": {
+    "displayName": "Phone",
+    "description": "Номер телефона для контактов"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "kind": "singleType",
+  "collectionName": "main_pages",
+  "info": {
+    "singularName": "main-page",
+    "pluralName": "main-pages",
+    "displayName": "Главная страница",
+    "description": "Hero, о компании, контакты, карта"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroTitle": {
+      "type": "string",
+      "default": "Chevrolet в рассрочку"
+    },
+    "heroSubtitle": {
+      "type": "string"
+    },
+    "heroAdvantages": {
+      "type": "component",
+      "component": "shared.hero-advantage",
+      "repeatable": true
+    },
+    "heroImageDesktop": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "heroImageMobile": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "ctaButtonText": {
+      "type": "string",
+      "default": "Получить консультацию"
+    },
+    "ctaConsentText": {
+      "type": "string",
+      "default": "Принимаю правила обработки данных"
+    },
+    "ctaPhoneErrorText": {
+      "type": "string",
+      "default": "Введите корректный номер телефона."
+    },
+    "ctaConsentErrorText": {
+      "type": "string",
+      "default": "Подтвердите согласие на обработку данных."
+    },
+    "aboutTitle": {
+      "type": "string",
+      "default": "О компании"
+    },
+    "aboutText": {
+      "type": "text"
+    },
+    "aboutAdvantages": {
+      "type": "component",
+      "component": "shared.about-advantage",
+      "repeatable": true
+    },
+    "address": {
+      "type": "string"
+    },
+    "workHours": {
+      "type": "string"
+    },
+    "mapEmbedUrl": {
+      "type": "string"
+    },
+    "logoScript": {
+      "type": "customField",
+      "customField": "plugin::strapi-code-editor-custom-field.code-editor-text",
+      "options": {
+        "language": "javascript"
+      },
+      "description": "JS-скрипт (IIFE) для #maxa-logo. Без библиотек. Все стили внутри <style>. Анимация блика + prefers-reduced-motion. Нужен промт? Смотри IMAGE_SIZES.md."
+    },
+    "logoSubtitle": {
+      "type": "string",
+      "default": "Официальный дилер"
+    },
+    "ctaBottomTitle": {
+      "type": "string",
+      "default": "Свяжитесь с нами для консультации"
+    },
+    "ctaBottomSubtitle": {
+      "type": "text",
+      "default": "Всегда на связи и готовы рассказать, как оформить автомобиль в рассрочку."
+    },
+    "ctaBottomImageDesktop": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "ctaBottomImageMobile": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "socialLinks": {
+      "type": "component",
+      "component": "shared.social-link",
+      "repeatable": true
+    },
+    "phones": {
+      "type": "component",
+      "component": "shared.phone",
+      "repeatable": true
+    },
+    "footerDisclaimer": {
+      "type": "text",
+      "default": "*Сведения о ценах на продукцию бренда CHEVROLET, содержащиеся на сайте, носят исключительно информационный характер. Указанные цены могут отличаться от действительных цен дилеров CHEVROLET. Для получения подробной информации об актуальных ценах на продукцию CHEVROLET обращайтесь к дилерам CHEVROLET. Приобретение любой продукции бренда CHEVROLET осуществляется в соответствии с условиями индивидуального договора купли-продажи. Представленные изображения автомобиля могут отличаться от реализуемого."
+    }
+  }
+}

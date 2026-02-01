@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_about_advantages",
+  "info": {
+    "displayName": "About Advantage",
+    "description": "Преимущество в блоке О компании: только заголовок"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

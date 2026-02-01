@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_document_links",
+  "info": {
+    "displayName": "Document Link",
+    "description": "Ссылка на документ"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

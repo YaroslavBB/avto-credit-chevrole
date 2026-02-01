@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_hero_advantages",
+  "info": {
+    "displayName": "Hero Advantage",
+    "description": "Преимущество в hero: заголовок и подзаголовок"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string"
+    }
+  }
+}
