@@ -8,10 +8,10 @@ import BottomCtaSection from "@/components/BottomCtaSection";
 import HeaderWithMenu from "@/components/HeaderWithMenu";
 import Footer from "@/components/Footer";
 
-export default async function Home() {
-  let settings = await getMainPage("uz");
-  let header = await getHeader("uz");
-  let cars = await getCars("uz");
+export default async function HomeRu() {
+  let settings = await getMainPage("ru");
+  let header = await getHeader("ru");
+  let cars = await getCars("ru");
   if (!settings) {
     return (
       <main className="max-w-4xl mx-auto px-4 py-10 text-center text-gray-600">

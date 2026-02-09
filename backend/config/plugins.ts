@@ -7,4 +7,10 @@ export default () => ({
       jwtSecret: process.env.JWT_SECRET,
     },
   },
+  i18n: {
+    config: {
+      locales: ["uz", "ru"],
+      defaultLocale: "uz",
+    },
+  },
 });

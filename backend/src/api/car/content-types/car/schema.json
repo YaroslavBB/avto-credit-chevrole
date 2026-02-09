@@ -10,17 +10,27 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "title": {
       "type": "string",
-      "required": true
+      "required": true,
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "discountAmount": {
       "type": "integer"
     },
     "shortDescription": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "price": {
       "type": "integer",
@@ -32,12 +42,18 @@
     "advantages": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.advantage"
+      "component": "shared.advantage",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "documentLinks": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.document-link"
+      "component": "shared.document-link",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "photoDesktop": {
       "type": "media",
