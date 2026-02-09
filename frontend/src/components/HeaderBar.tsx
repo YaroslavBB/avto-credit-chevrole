@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { getStrapiMediaUrl, HeaderSettings } from "@/lib/api";
 
 type HeaderBarProps = {
@@ -13,6 +15,10 @@ function normalizePhone(phone: string | null | undefined): string {
 }
 
 export default function HeaderBar({ data, onMenuClick }: HeaderBarProps) {
+  const pathname = usePathname();
+  const isRu = pathname?.startsWith("/ru");
+  const languageHref = isRu ? "/" : "/ru";
+  const languageLabel = isRu ? "UZ" : "RU";
   const companyName = data?.companyName ?? "Chevrolet";
   const phone = normalizePhone(data?.ctaPhone);
   const docTitle = data?.docTitle ?? "";
@@ -75,6 +81,13 @@ export default function HeaderBar({ data, onMenuClick }: HeaderBarProps) {
           )}
         </div>
         <div className="flex items-center gap-4">
+          <Link
+            href={languageHref}
+            className="inline-flex h-9 items-center rounded-full border border-gray-200 px-3 text-xs font-semibold uppercase tracking-widest text-gray-700 hover:text-gray-900 hover:border-gray-300"
+            aria-label={`Переключить язык на ${languageLabel}`}
+          >
+            {languageLabel}
+          </Link>
           <div className="text-right">
             <div className="text-xs uppercase tracking-widest text-gray-500">
               {data?.ctaLabel ?? "Позвоните нам"}

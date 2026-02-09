@@ -1,4 +1,6 @@
 const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL ?? "http://localhost:1337";
+export type Locale = "uz" | "ru";
+const DEFAULT_LOCALE: Locale = "uz";
 
 function unwrapStrapiDoc<T extends Record<string, unknown>>(doc: T): T {
   const maybeAttributes = (doc as { attributes?: T }).attributes;
@@ -102,9 +104,9 @@ export type HeaderSettings = {
   ctaPhone?: string | null;
 };
 
-export async function getCars(): Promise<Car[]> {
+export async function getCars(locale: Locale = DEFAULT_LOCALE): Promise<Car[]> {
   const res = await fetch(
-    `${STRAPI_URL}/api/cars?populate=photoDesktop&populate=photoMobile&populate=advantages&populate=documentLinks&sort=order:asc&status=published`,
+    `${STRAPI_URL}/api/cars?populate=photoDesktop&populate=photoMobile&populate=advantages&populate=documentLinks&sort=order:asc&status=published&locale=${locale}`,
     { next: { revalidate: 0 }, cache: "no-store" }
   );
   if (!res.ok) return [];
@@ -131,8 +133,8 @@ export async function getCars(): Promise<Car[]> {
   });
 }
 
-export async function getSiteSettings(): Promise<SiteSettings | null> {
-  const res = await fetch(`${STRAPI_URL}/api/site-setting?status=published`, {
+export async function getSiteSettings(locale: Locale = DEFAULT_LOCALE): Promise<SiteSettings | null> {
+  const res = await fetch(`${STRAPI_URL}/api/site-setting?status=published&locale=${locale}`, {
     next: { revalidate: 60 },
     cache: "no-store",
   });
@@ -171,9 +173,9 @@ export async function getSiteSettings(): Promise<SiteSettings | null> {
   };
 }
 
-export async function getMainPage(): Promise<MainPage | null> {
+export async function getMainPage(locale: Locale = DEFAULT_LOCALE): Promise<MainPage | null> {
   const res = await fetch(
-    `${STRAPI_URL}/api/main-page?status=published&populate=heroImageDesktop&populate=heroImageMobile&populate=heroAdvantages&populate=aboutAdvantages&populate=ctaBottomImageDesktop&populate=ctaBottomImageMobile&populate=socialLinks&populate=socialLinks.icon&populate=phones`,
+    `${STRAPI_URL}/api/main-page?status=published&populate=heroImageDesktop&populate=heroImageMobile&populate=heroAdvantages&populate=aboutAdvantages&populate=ctaBottomImageDesktop&populate=ctaBottomImageMobile&populate=socialLinks&populate=socialLinks.icon&populate=phones&locale=${locale}`,
     {
       next: { revalidate: 0 },
       cache: "no-store",
@@ -218,9 +220,9 @@ export async function getMainPage(): Promise<MainPage | null> {
   };
 }
 
-export async function getHeader(): Promise<HeaderSettings | null> {
+export async function getHeader(locale: Locale = DEFAULT_LOCALE): Promise<HeaderSettings | null> {
   const res = await fetch(
-    `${STRAPI_URL}/api/header?status=published&populate=companyLogo&populate=docFile`,
+    `${STRAPI_URL}/api/header?status=published&populate=companyLogo&populate=docFile&locale=${locale}`,
     {
       next: { revalidate: 0 },
       cache: "no-store",

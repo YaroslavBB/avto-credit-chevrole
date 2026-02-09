@@ -10,19 +10,32 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "heroTitle": {
       "type": "string",
-      "default": "Chevrolet в рассрочку"
+      "default": "Chevrolet в рассрочку",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "heroSubtitle": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "heroAdvantages": {
       "type": "component",
       "component": "shared.hero-advantage",
-      "repeatable": true
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "heroImageDesktop": {
       "type": "media",
@@ -30,7 +43,10 @@
       "required": false,
       "allowedTypes": [
         "images"
-      ]
+      ],
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "heroImageMobile": {
       "type": "media",
@@ -38,44 +54,77 @@
       "required": false,
       "allowedTypes": [
         "images"
-      ]
+      ],
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "ctaButtonText": {
       "type": "string",
-      "default": "Получить консультацию"
+      "default": "Получить консультацию",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "ctaConsentText": {
       "type": "string",
-      "default": "Принимаю правила обработки данных"
+      "default": "Принимаю правила обработки данных",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "ctaPhoneErrorText": {
       "type": "string",
-      "default": "Введите корректный номер телефона."
+      "default": "Введите корректный номер телефона.",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "ctaConsentErrorText": {
       "type": "string",
-      "default": "Подтвердите согласие на обработку данных."
+      "default": "Подтвердите согласие на обработку данных.",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "aboutTitle": {
       "type": "string",
-      "default": "О компании"
+      "default": "О компании",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "aboutText": {
-      "type": "text"
+      "type": "text",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "aboutAdvantages": {
       "type": "component",
       "component": "shared.about-advantage",
-      "repeatable": true
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "address": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "workHours": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "mapEmbedUrl": {
-      "type": "text"
+      "type": "text",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "logoScript": {
       "type": "customField",
@@ -83,19 +132,31 @@
       "options": {
         "language": "javascript"
       },
-      "description": "JS-скрипт (IIFE) для #maxa-logo. Без библиотек. Все стили внутри <style>. Анимация блика + prefers-reduced-motion. Нужен промт? Смотри IMAGE_SIZES.md."
+      "description": "JS-скрипт (IIFE) для #maxa-logo. Без библиотек. Все стили внутри <style>. Анимация блика + prefers-reduced-motion. Нужен промт? Смотри IMAGE_SIZES.md.",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "logoSubtitle": {
       "type": "string",
-      "default": "Официальный дилер"
+      "default": "Официальный дилер",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "ctaBottomTitle": {
       "type": "string",
-      "default": "Свяжитесь с нами для консультации"
+      "default": "Свяжитесь с нами для консультации",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "ctaBottomSubtitle": {
       "type": "text",
-      "default": "Всегда на связи и готовы рассказать, как оформить автомобиль в рассрочку."
+      "default": "Всегда на связи и готовы рассказать, как оформить автомобиль в рассрочку.",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "ctaBottomImageDesktop": {
       "type": "media",
@@ -103,7 +164,10 @@
       "required": false,
       "allowedTypes": [
         "images"
-      ]
+      ],
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "ctaBottomImageMobile": {
       "type": "media",
@@ -111,21 +175,33 @@
       "required": false,
       "allowedTypes": [
         "images"
-      ]
+      ],
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "socialLinks": {
       "type": "component",
       "component": "shared.social-link",
-      "repeatable": true
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "phones": {
       "type": "component",
       "component": "shared.phone",
-      "repeatable": true
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     },
     "footerDisclaimer": {
       "type": "text",
-      "default": "*Сведения о ценах на продукцию бренда CHEVROLET, содержащиеся на сайте, носят исключительно информационный характер. Указанные цены могут отличаться от действительных цен дилеров CHEVROLET. Для получения подробной информации об актуальных ценах на продукцию CHEVROLET обращайтесь к дилерам CHEVROLET. Приобретение любой продукции бренда CHEVROLET осуществляется в соответствии с условиями индивидуального договора купли-продажи. Представленные изображения автомобиля могут отличаться от реализуемого."
+      "default": "*Сведения о ценах на продукцию бренда CHEVROLET, содержащиеся на сайте, носят исключительно информационный характер. Указанные цены могут отличаться от действительных цен дилеров CHEVROLET. Для получения подробной информации об актуальных ценах на продукцию CHEVROLET обращайтесь к дилерам CHEVROLET. Приобретение любой продукции бренда CHEVROLET осуществляется в соответствии с условиями индивидуального договора купли-продажи. Представленные изображения автомобиля могут отличаться от реализуемого.",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     }
   }
 }
