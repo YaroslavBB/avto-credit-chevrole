@@ -7,7 +7,13 @@ export interface SharedAboutAdvantage extends Struct.ComponentSchema {
     displayName: 'About Advantage';
   };
   attributes: {
-    title: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
   };
 }
 
@@ -18,8 +24,19 @@ export interface SharedAdvantage extends Struct.ComponentSchema {
     displayName: 'Advantage';
   };
   attributes: {
-    text: Schema.Attribute.Text;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
+    text: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
   };
 }
 
@@ -30,8 +47,20 @@ export interface SharedCtaButton extends Struct.ComponentSchema {
     displayName: 'CTA Button';
   };
   attributes: {
-    link: Schema.Attribute.String & Schema.Attribute.Required;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
+    link: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
   };
 }
 
@@ -42,8 +71,20 @@ export interface SharedDocumentLink extends Struct.ComponentSchema {
     displayName: 'Document Link';
   };
   attributes: {
-    link: Schema.Attribute.String & Schema.Attribute.Required;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
+    link: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
   };
 }
 
@@ -54,8 +95,19 @@ export interface SharedHeroAdvantage extends Struct.ComponentSchema {
     displayName: 'Hero Advantage';
   };
   attributes: {
-    subtitle: Schema.Attribute.String;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
+    subtitle: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
   };
 }
 
@@ -66,7 +118,13 @@ export interface SharedPhone extends Struct.ComponentSchema {
     displayName: 'Phone';
   };
   attributes: {
-    value: Schema.Attribute.String & Schema.Attribute.Required;
+    value: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
   };
 }
 
@@ -78,8 +136,20 @@ export interface SharedSocialLink extends Struct.ComponentSchema {
   };
   attributes: {
     icon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    label: Schema.Attribute.String & Schema.Attribute.Required;
-    url: Schema.Attribute.String & Schema.Attribute.Required;
+    label: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    url: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
   };
 }
 
